@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD IMAM HASAN | Professional Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;700&display=swap');
+
+        :root {
+            --primary: #38bdf8;
+            --secondary: #818cf8;
+            --bg-dark: #0b0f1a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: #f8fafc;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.3s;
+        }
+
+        .glass-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #particleCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .role-badge {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav
+        class="fixed w-full z-50 bg-[#0b0f1a]/80 backdrop-blur-md border-b border-white/5 py-4 px-6 md:px-20 flex justify-between items-center">
+        <div class="text-2xl font-extrabold tracking-tighter uppercase">Imam <span class="text-sky-500">Hasan</span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-widest">
+            <a href="#home" class="hover:text-sky-400 transition">Home</a>
+            <a href="#about" class="hover:text-sky-400 transition">About</a>
+            <a href="#experience" class="hover:text-sky-400 transition">Experience</a>
+            <a href="#skills" class="hover:text-sky-400 transition">Skills</a>
+            <a href="#contact" class="hover:text-sky-400 transition">Contact</a>
+        </div>
+        <!-- Mobile Menu Toggle (Simplified for this version) -->
+        <div class="md:hidden">
+            <i class="fas fa-bars text-2xl cursor-pointer"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+        <div
+            class="reveal inline-block px-4 py-1 border border-sky-500/30 rounded-full text-sky-400 text-xs font-bold mb-6 uppercase tracking-widest bg-sky-500/5">
+            Available for Opportunities
+        </div>
+        <h1 class="reveal text-5xl md:text-8xl font-black mb-6 leading-tight">MD IMAM <span
+                class="gradient-text">HASAN</span></h1>
+        <p class="reveal text-xl md:text-2xl font-light text-slate-400 mb-8 max-w-3xl">
+            Project Manager | API Consultant | Network Engineer | SQA Expert
+        </p>
+        <div class="reveal flex gap-4">
+            <a href="#contact"
+                class="px-8 py-4 bg-sky-600 hover:bg-sky-500 text-white font-bold rounded-lg transition-all shadow-lg shadow-sky-600/20">Contact
+                Me</a>
+            <a href="#experience"
+                class="px-8 py-4 border border-slate-700 hover:bg-slate-800 text-white font-bold rounded-lg transition-all">View
+                Career</a>
+        </div>
+    </section>
+
+    <!-- About / Career Objective -->
+    <section id="about" class="py-24 px-6 md:px-20">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="reveal">
+                    <h2 class="text-3xl font-bold mb-6 italic border-b-2 border-sky-500 inline-block">Career Objective
+                    </h2>
+                    <p class="text-slate-400 leading-relaxed text-sm md:text-base">
+                        Detail-oriented and driven computer science student with a solid foundation in software
+                        development, machine learning, and data analytics. Eager to leverage my technical skills and
+                        hands-on experience to contribute to an innovative tech team in a dynamic environment. I am
+                        passionate about developing efficient and user-friendly applications, and excited to bring my
+                        strong problem-solving abilities to tackle real-world challenges.
+                    </p>
+                </div>
+                <div class="reveal">
+                    <h2 class="text-3xl font-bold mb-6 italic border-b-2 border-sky-500 inline-block">Professional
+                        Summary</h2>
+                    <p class="text-slate-400 leading-relaxed text-sm md:text-base italic">
+                        Alhamdulillah, a highly motivated professional with extensive experience as a Project Manager,
+                        API Consultant, and Network Engineer. Skilled in leading cross-functional teams, managing
+                        end-to-end software projects, and implementing robust API integrations. Adept at ensuring
+                        seamless network operations and delivering high-quality software solutions.
+                    </p>
+                    <div class="mt-4 flex items-center space-x-2 text-sky-400 font-bold">
+                        <i class="fas fa-globe"></i>
+                        <a href="http://www.innovatesolution.com" target="_blank">www.innovatesolution.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 px-6 md:px-20 bg-slate-900/10">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="reveal text-4xl font-bold mb-16 border-l-8 border-sky-500 pl-6">Professional Journey</h2>
+
+            <div class="space-y-12">
+                <!-- Innovate Solution Role -->
+                <div class="glass-card p-10 rounded-[40px] reveal">
+                    <div class="flex flex-col md:flex-row justify-between mb-8 border-b border-white/5 pb-6">
+                        <div>
+                            <h3 class="text-3xl font-extrabold text-white">Innovate Solution</h3>
+                            <p class="text-sky-400 font-bold mt-1">April 2025 - Present | Dhaka, Bangladesh</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-4 md:mt-0">
+                            <span class="role-badge">Project Manager</span>
+                            <span class="role-badge">API Consultant</span>
+                            <span class="role-badge">Network Engineer</span>
+                            <span class="role-badge">SQA</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <!-- Project Management -->
+                        <div>
+                            <h4 class="text-white font-bold mb-4 flex items-center space-x-2">
+                                <i class="fas fa-tasks text-sky-500"></i>
+                                <span>Project Management</span>
+                            </h4>
+                            <ul class="text-slate-400 text-sm space-y-2 list-none">
+                                <li><i class="fas fa-caret-right text-sky-500 mr-2"></i>Lead end-to-end software
+                                    projects.</li>
+                                <li><i class="fas fa-caret-right text-sky-500 mr-2"></i>Coordinate cross-functional
+                                    teams.</li>
+                                <li><i class="fas fa-caret-right text-sky-500 mr-2"></i>Liaise with international
+                                    clients.</li>
+                                <li><i class="fas fa-caret-right text-sky-500 mr-2"></i>Drive continuous improvement in
+                                    workflows.</li>
+                            </ul>
+                        </div>
+                        <!-- API Consulting -->
+                        <div>
+                            <h4 class="text-white font-bold mb-4 flex items-center space-x-2">
+                                <i class="fas fa-code text-indigo-500"></i>
+                                <span>API Consulting</span>
+                            </h4>
+                            <ul class="text-slate-400 text-sm space-y-2 list-none">
+                                <li><i class="fas fa-caret-right text-indigo-500 mr-2"></i>Design & maintain robust API
+                                    integrations.</li>
+                                <li><i class="fas fa-caret-right text-indigo-500 mr-2"></i>Review API documentation &
+                                    strategies.</li>
+                                <li><i class="fas fa-caret-right text-indigo-500 mr-2"></i>Ensure interoperability &
+                                    performance.</li>
+                                <li><i class="fas fa-caret-right text-indigo-500 mr-2"></i>Provide technical guidance to
+                                    clients.</li>
+                            </ul>
+                        </div>
+                        <!-- Networking -->
+                        <div>
+                            <h4 class="text-white font-bold mb-4 flex items-center space-x-2">
+                                <i class="fas fa-network-wired text-purple-500"></i>
+                                <span>Network Engineering</span>
+                            </h4>
+                            <ul class="text-slate-400 text-sm space-y-2 list-none">
+                                <li><i class="fas fa-caret-right text-purple-500 mr-2"></i>Configure scalable network
+                                    infrastructure.</li>
+                                <li><i class="fas fa-caret-right text-purple-500 mr-2"></i>Monitor performance &
+                                    troubleshoot.</li>
+                                <li><i class="fas fa-caret-right text-purple-500 mr-2"></i>Ensure security, reliability
+                                    & uptime.</li>
+                                <li><i class="fas fa-caret-right text-purple-500 mr-2"></i>Mentor junior engineers.</li>
+                            </ul>
+                        </div>
+                        <!-- SQA -->
+                        <div>
+                            <h4 class="text-white font-bold mb-4 flex items-center space-x-2">
+                                <i class="fas fa-bug text-red-500"></i>
+                                <span>SQA Engineering</span>
+                            </h4>
+                            <ul class="text-slate-400 text-sm space-y-2 list-none">
+                                <li><i class="fas fa-caret-right text-red-500 mr-2"></i>Plan & execute regression
+                                    testing.</li>
+                                <li><i class="fas fa-caret-right text-red-500 mr-2"></i>Identify & track defects using
+                                    Jira.</li>
+                                <li><i class="fas fa-caret-right text-red-500 mr-2"></i>Maintain technical alignment
+                                    with devs.</li>
+                                <li><i class="fas fa-caret-right text-red-500 mr-2"></i>Develop test scripts &
+                                    documentation.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Capstone Project -->
+                <div class="glass-card p-8 rounded-3xl reveal border-l-4 border-sky-500/50">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <h3 class="text-xl font-bold">Project Leader – University Capstone Project</h3>
+                        <span class="text-slate-500 font-mono text-sm italic">Jan 2021 - May 2024</span>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-4">International Islami University, Chittagong</p>
+                    <ul class="text-slate-400 text-sm space-y-2 list-disc ml-6">
+                        <li>Developed a comprehensive software solution using C, C++, and Java.</li>
+                        <li>Organized team meetings and delegated tasks for efficient collaboration.</li>
+                        <li>Tracked milestones and maintained project documentation, ensuring high faculty commendation.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-6 md:px-20">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="reveal text-center text-4xl font-bold mb-16">Technical Toolkit</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="glass-card p-8 rounded-3xl text-center reveal">
+                    <i class="fas fa-tasks text-4xl text-sky-500 mb-6"></i>
+                    <h4 class="font-bold mb-2">Management</h4>
+                    <p class="text-xs text-slate-500 uppercase tracking-tighter">Agile, Leadership, Jira</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl text-center reveal">
+                    <i class="fas fa-network-wired text-4xl text-indigo-500 mb-6"></i>
+                    <h4 class="font-bold mb-2">Networking</h4>
+                    <p class="text-xs text-slate-500 uppercase tracking-tighter">Security, Protocols, Config</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl text-center reveal">
+                    <i class="fas fa-brain text-4xl text-purple-500 mb-6"></i>
+                    <h4 class="font-bold mb-2">ML & AI</h4>
+                    <p class="text-xs text-slate-500 uppercase tracking-tighter">Model Dev, Data Analysis</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl text-center reveal">
+                    <i class="fas fa-desktop text-4xl text-green-500 mb-6"></i>
+                    <h4 class="font-bold mb-2">OS & Tools</h4>
+                    <p class="text-xs text-slate-500 uppercase tracking-tighter">Linux, Git, Office Suite</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Strengths -->
+    <section class="py-24 px-6 md:px-20 bg-slate-900/10">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
+            <div class="reveal">
+                <h2 class="text-3xl font-bold mb-10 italic">Academic Journey</h2>
+                <div class="space-y-10">
+                    <div class="border-l-4 border-sky-500 pl-6">
+                        <h4 class="text-xl font-bold uppercase">B.Sc. in CSE</h4>
+                        <p class="text-slate-400">International Islami University, Chittagong</p>
+                        <p class="text-slate-500 text-sm">Jan 2021 – Dec 2024</p>
+                        <p class="text-sky-500 font-bold mt-2">Result: 1st Class Honours</p>
+                    </div>
+                    <div class="border-l-4 border-slate-700 pl-6">
+                        <h4 class="text-xl font-bold uppercase">HSC (Science)</h4>
+                        <p class="text-slate-400">Govt. Mujib College, Noakhali</p>
+                        <p class="text-slate-500 text-sm">Batch of 2018</p>
+                    </div>
+                </div>
+            </div>
+            <div class="reveal">
+                <h2 class="text-3xl font-bold mb-10 italic">Core Strengths</h2>
+                <div class="grid gap-4">
+                    <div class="flex items-center space-x-4 bg-white/5 p-5 rounded-2xl border border-white/5">
+                        <i class="fas fa-check-circle text-sky-500 text-xl"></i>
+                        <span class="text-sm font-medium leading-snug">Problem-solving mindset & Target-focused
+                            drive</span>
+                    </div>
+                    <div class="flex items-center space-x-4 bg-white/5 p-5 rounded-2xl border border-white/5">
+                        <i class="fas fa-check-circle text-sky-500 text-xl"></i>
+                        <span class="text-sm font-medium leading-snug">Excellent English Communication (Written &
+                            Verbal)</span>
+                    </div>
+                    <div class="flex items-center space-x-4 bg-white/5 p-5 rounded-2xl border border-white/5">
+                        <i class="fas fa-check-circle text-sky-500 text-xl"></i>
+                        <span class="text-sm font-medium leading-snug">Experienced with Global Clients & Technical
+                            Alignment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 md:px-20">
+        <div
+            class="max-w-4xl mx-auto glass-card p-12 rounded-[50px] text-center border-2 border-sky-500/20 shadow-2xl reveal">
+            <h2 class="text-5xl font-black mb-8">Let's Connect</h2>
+            <div class="grid md:grid-cols-2 gap-8 text-left mb-12">
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full bg-sky-500/20 flex items-center justify-center text-sky-400">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-500 uppercase font-bold">Call Me</p>
+                            <p class="text-sm font-bold">+8801580791869</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-400">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-500 uppercase font-bold">Personal Email</p>
+                            <p class="text-sm font-bold">mdimamhasan034@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-400 uppercase font-bold">Present Address</p>
+                            <p class="text-sm font-bold leading-tight">Senbag, Noakhali<br>Chittagong</p>
+                            <p class="text-xs text-slate-400 uppercase font-bold">Permanent Address</p>
+                            <p class="text-sm font-bold leading-tight">Pallobi, Mirpur 12,<br>Dhaka-1216</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/md-imam-hasan-2b3084280/" target="_blank"
+                            class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-sky-500 transition-all">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Imam968" target="_blank"
+                            class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-sky-500 transition-all">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="mailto:imamhasan@example.com"
+                class="inline-block px-12 py-5 bg-sky-600 hover:bg-sky-500 text-white font-black rounded-2xl transition-all shadow-xl shadow-sky-600/20">
+                Send Message
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/5 text-center">
+        <p class="text-slate-500 text-xs uppercase tracking-widest font-bold">
+            &copy; 2026 MD IMAM HASAN | Developed with <span class="text-red-500">❤</span> by AI
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Scroll reveal
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // Neural Background
+            const canvas = document.getElementById('particleCanvas');
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+
+            const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
+            window.addEventListener('resize', resize);
+            resize();
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.speedX = Math.random() * 0.4 - 0.2;
+                    this.speedY = Math.random() * 0.4 - 0.2;
+                }
+                update() {
+                    this.x += this.speedX; this.y += this.speedY;
+                    if (this.x > canvas.width) this.x = 0; if (this.x < 0) this.x = canvas.width;
+                    if (this.y > canvas.height) this.y = 0; if (this.y < 0) this.y = canvas.height;
+                }
+                draw() {
+                    ctx.fillStyle = 'rgba(56, 189, 248, 0.25)';
+                    ctx.beginPath(); ctx.arc(this.x, this.y, 1.2, 0, Math.PI * 2); ctx.fill();
+                }
+            }
+
+            for (let i = 0; i < 90; i++) particles.push(new Particle());
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => { p.update(); p.draw(); });
+                for (let a = 0; a < particles.length; a++) {
+                    for (let b = a; b < particles.length; b++) {
+                        let dx = particles[a].x - particles[b].x;
+                        let dy = particles[a].y - particles[b].y;
+                        let dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < 150) {
+                            ctx.strokeStyle = `rgba(56, 189, 248, ${1 - dist / 150})`;
+                            ctx.lineWidth = 0.5;
+                            ctx.beginPath(); ctx.moveTo(particles[a].x, particles[a].y);
+                            ctx.lineTo(particles[b].x, particles[b].y); ctx.stroke();
+                        }
+                    }
+                }
+                requestAnimationFrame(animate);
+            }
+            animate();
+        });
+    </script>
+</body>
+
+</html>
